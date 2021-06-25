@@ -13,27 +13,27 @@
 
 	  function drawSheetName() {
       var queryString = encodeURIComponent('SELECT A, H, O, Q, R, U LIMIT 5 OFFSET 8');
-          debugger
+  //        debugger
 
-          var xhr = new XMLHttpRequest();
-          //xhr.setRequestHeader("Origin", "file:///C:/Users/serge/Desktop/");
-		xhr.open('GET', 'https://docs.google.com/spreadsheets/d/1XWJLkAwch5GXAt_7zOFDcg8Wm8Xv29_8PWuuW15qmAE/gviz/tq?gid=0&headers=1&tq=' + queryString);
-          xhr.addEventListener("readystatechange", function (resp) {
-              if (xhr.readyState === XMLHttpRequest.DONE) {
-                  debugger
-                  if (xhr.status === 200) {
-                      alert('GET succeeded.');
-                  }
-                  else {
-                      alert('GET failed.');
-                  }
-              }
-          });
+  //        var xhr = new XMLHttpRequest();
+  //        //xhr.setRequestHeader("Origin", "file:///C:/Users/serge/Desktop/");
+		//xhr.open('GET', 'https://docs.google.com/spreadsheets/d/1XWJLkAwch5GXAt_7zOFDcg8Wm8Xv29_8PWuuW15qmAE/gviz/tq?gid=0&headers=1&tq=' + queryString);
+  //        xhr.addEventListener("readystatechange", function (resp) {
+  //            if (xhr.readyState === XMLHttpRequest.DONE) {
+  //                debugger
+  //                if (xhr.status === 200) {
+  //                    alert('GET succeeded.');
+  //                }
+  //                else {
+  //                    alert('GET failed.');
+  //                }
+  //            }
+  //        });
 
-          xhr.send();
-    //  var query = new google.visualization.Query(
-    //      'https://docs.google.com/spreadsheets/d/1XWJLkAwch5GXAt_7zOFDcg8Wm8Xv29_8PWuuW15qmAE/gviz/tq?gid=0&headers=1&tq=' + queryString);
-    //  query.send(handleSampleDataQueryResponse,{sendMethod :'scriptInjection' });
+  //        xhr.send();
+      var query = new google.visualization.Query(
+          'https://docs.google.com/spreadsheets/d/1XWJLkAwch5GXAt_7zOFDcg8Wm8Xv29_8PWuuW15qmAE/gviz/tq?gid=0&headers=1&tq=' + queryString);
+      query.send(handleSampleDataQueryResponse);
     }
 
     function handleSampleDataQueryResponse(response) {
