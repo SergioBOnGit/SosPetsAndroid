@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+PolisaBody-credit-guard-error.html
+    <title>HafakaToGo</title>
+    <style>
+        body {
+            font: 500 20px / 32px Roboto, "Helvetica Neue", sans-serif;
+        }
+
+        
+
+        .PolisaBody_ContinueButton {
+            /*background: url(/HafakaNet/images/HafakaToGo/regular_button.gif) repeat-x;*/
+            color: #000;
+            cursor: hand;
+            font-weight: bold;
+            font-size: 13px;
+            height: 26px;
+            width: 89px;
+            color: White;
+            padding-top: 3px;
+            text-align: center;
+            display: block;
+            background-color:rgb(33, 150, 243);
+        }
+
+        
+    </style>
+    <script type="text/javascript">
+        function reloadCreditGuardParentFunction() {
+            try {
+                window.parent.postMessage(
+                    '{"func": "showCrediGuardFrame",' +
+                    '"args":true,"message": "' + window.location.search.toString() + '" }', "*");
+                // Use target origin instead of *
+            }
+            catch (e) { }
+        }
+
+        function loadPage() {
+            var queryString = window.location.search.toString();
+            if (parent.getParameterByName) {
+                var errorText = parent.getParameterByName("ErrorText", queryString);
+                var errorCode = parent.getParameterByName("ErrorCode", queryString);
+                document.getElementById("spanErrorCode").innerText = "קוד שגיאה :" + errorCode;
+                document.getElementById("spanErrorText").innerText = errorText;
+            }
+
+
+            try {
+                window.parent.postMessage(
+                    '{"func": "writeToClalLog",' +
+                    '"args":true,"message": "' + window.location.search.toString() + '" }', "*");
+            }
+            catch (e) { }
+        }
+
+    </script>
+
+<script id='F5_cookieInitId'>F5_removeLastScript(document,'F5_cookieInitId');F5_initializeCookiesFromMeta();</script>
+</head>
+<body onload="loadPage()" dir="rtl">
+
+    <span id="spanErrorCode" class="CaptionText" style="color: red"></span>
+    <br />
+    <span id="spanErrorText" class="CaptionText" style="color: red"></span>
+    <br />
+    <br />
+    <div id="divTotalsButton" style="position: absolute; right: 10px;">
+        <span  style="display: inline;" onclick="reloadCreditGuardParentFunction()" >
+            <span class="PolisaBody_ContinueButton" style="text-align: center;">נסה שנית </span>
+        </span>
+
+    </div>
+</body>
+</html>
