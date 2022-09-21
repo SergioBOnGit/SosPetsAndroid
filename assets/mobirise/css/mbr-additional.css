@@ -993,13 +993,16 @@ section.lazy-placeholder:after {
 .cid-rF5xNlaAZt .collapsed.navbar-expand {
   flex-direction: column;
   -webkit-flex-direction: column;
+
+  height:initial;
 }
 .cid-rF5xNlaAZt .collapsed .btn {
   display: -webkit-flex;
 }
 .cid-rF5xNlaAZt .collapsed .navbar-collapse {
-  display: none !important;
-  padding-right: 0 !important;
+    display: none !important;
+    padding-right: 0 !important;
+    height: -webkit-fill-available;
 }
 .cid-rF5xNlaAZt .collapsed .navbar-collapse.collapsing,
 .cid-rF5xNlaAZt .collapsed .navbar-collapse.show {
