@@ -1,0 +1,9 @@
+{
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "name": "אס.או.אס חיות",
+  "short_name": "אס.או.אס",
+  "theme_color": "#c48b9f",
+  "background_color": "#c48b9f"
+}

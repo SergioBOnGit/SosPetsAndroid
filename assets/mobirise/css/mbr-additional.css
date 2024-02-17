@@ -710,7 +710,11 @@ section.lazy-placeholder:after {
   opacity: 0.3;
 }
 .cid-qTkA127IK8 {
-  background-image: url("../../../assets/images/c23b2e32877c4f0eb506f3790e9fb178-2000x1323.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:top;
+    padding-top:250px;
+    background-image: url("../../../background.webp");
 }
 .cid-qTkAaeaxX5 {
   padding-top: 60px;
