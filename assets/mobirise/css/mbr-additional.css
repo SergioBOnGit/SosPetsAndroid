@@ -714,6 +714,8 @@ section.lazy-placeholder:after {
     background-size: contain;
     background-position:top;
     padding-top:250px;
+     width:1120px;
+    height:1000px;
     background-image: url("../../../background.webp");
 }
 .cid-qTkAaeaxX5 {
